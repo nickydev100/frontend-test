@@ -68,7 +68,7 @@ function mutateArray(a) {
     })
   });
 
-  return ret.filter(element => element.guest_type === 'guest');
+  return ret.filter(element => element.guest_type === 'guest').sort((e1, e2) => e1.last_name + e1.first_name > e2.last_name + e2.first_name && 1 || -1);
 }
 
 $(document).ready(function() {
