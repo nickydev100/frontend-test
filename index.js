@@ -68,7 +68,7 @@ function mutateArray(a) {
     })
   });
 
-  return ret;
+  return ret.filter(element => element.guest_type === 'guest');
 }
 
 $(document).ready(function() {
